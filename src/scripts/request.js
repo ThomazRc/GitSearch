@@ -11,7 +11,7 @@ export async function getProfile (profileName){
         localStorage.setItem('searchProfile', JSON.stringify(res));
 
         if(res.message !== 'Not Found') {
-            window.location.replace('/src/pages/profile.html');
+            window.location.replace('src/pages/profile.html');
 
         }else{
             window.location.replace('src/pages/error.html');
