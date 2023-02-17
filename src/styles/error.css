@@ -26,6 +26,7 @@ main{
     width: 21.375rem;
     height: 3.75rem;
     border-radius: 5px;
+    border: 0;
     background-color: var(--color-brand-2);
 }
 

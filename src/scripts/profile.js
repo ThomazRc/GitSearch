@@ -1,16 +1,35 @@
-export function searchProfile (){
-    const input = document.querySelector('.search_input');
-    const button = document.querySelector('.search_button');
+import { renderProfile, renderRepos } from "./render.js";
+
+
+function showProfile () {
+    const profile = [JSON.parse(localStorage.getItem('searchProfile'))];
+    
+
+
+    renderProfile(profile);
+    
+}
+
+showProfile();
+
+function showRepos (){
+    const repository = JSON.parse(localStorage.getItem('searchRepos'));
+
+    renderRepos(repository);
+
+}
+
+showRepos();
+
+function profileReturn (){
+    const button = document.querySelector('.user_button');
 
     button.addEventListener('click', () => {
-        const profile = await getProfileByName(input.value);
-
-
+        window.location.replace("../../index.html");
+        
+    
     });
+   
 }
 
-function showProfile (){
-    const profile = JSON.parse(localStorage.getItem(''));
-
-}
-
+profileReturn();
